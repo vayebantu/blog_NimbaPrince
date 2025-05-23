@@ -1,0 +1,103 @@
+<html>
+<head><title>Nimba Prince</title>
+<STYle>
+   :root {
+      --primary-color: #0025fa;
+         }
+*{padding:0;
+  margin: 0;
+  box-sizing: border-box;
+ }
+body{background-color: rgb(62, 57, 57);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+ ul{list-style: none;}
+  li a{float: left; padding: 10px; text-align: center;}
+  ul {display: inline-flex;
+            list-style: none;}
+ul, li, a{text-decoration: none;
+                    color: #fff;}
+ ul li{width: 100px;
+                margin: 8px;
+                padding: 3px;}
+ul li :hover{background-color: red;
+                border-radius: 2px;}
+.image{width: 300px;
+            height: auto; float: left; box-shadow: 5px 7px 15px; position: relative;
+          display: block; padding: 15px; text-align: center; margin: 3px;
+          background: blue;}
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: rgba(255, 255, 255, 0.477);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;}
+   .modal button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: var(--primary-color);
+      color: rgb(255, 251, 251);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+     @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+      }}
+
+</STYle></head>
+<body>
+<ul>
+<li><a href="Home.html">HOME</a></li>
+<li><a href="About.html">ABOUT US</a></li>
+<li><a href="Contact.html">CONTACT</a></li>
+</ul> <br><br>
+<div class="image">
+<img width="250" src="np.jpg" alt="My photo" class="photo" onclick="openModal('aboutModal')">
+</div>
+
+<div class="modal" id="aboutModal">
+    <div class="modal-content">
+      <h2>About US</h2>
+      <p>We are team of innovators who harness the power of Artificial Intelligence (AI)<br>
+         to change video content creation. Our mission is to promote underground artist<br>
+        businesses, and marketers to produce high-quality, engaging video effortlessly. <br>
+      With the rise of AI technology, we have developed video for advertising businsess online.</p>
+      <button onclick="closeModal('aboutModal')"><a href="video.htlm.html">Watch More</a></button>
+      <button onclick="closeModal('aboutModal')">&times;</button>
+      </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    function confirmSubmit(event) {
+      event.preventDefault();
+      openModal('confirmModal');
+    }
+    function submitForm() {
+      closeModal('confirmModal');
+      alert('Form submitted successfully!');
+    }
+  </script>
+</body>
+</html>
